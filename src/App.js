@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const api = {
 	key: "28ba66a8a0ec4a630fcc6599af227b2c",
-	base: "http://api.openweathermap.org/data/2.5/",
+	base: "https://api.openweathermap.org/data/2.5/",
 };
 
 function App() {
@@ -89,7 +89,10 @@ function App() {
 						<div className="weather-box">
 							<div className="temp">
 								{Math.round(weather.main.temp)}°C
-                <p>Feels Like : {Math.round(weather.main.feels_like)}°C</p>
+								<p>
+									Feels Like :{" "}
+									{Math.round(weather.main.feels_like)}°C
+								</p>
 							</div>
 							<div className="weather">
 								<img
